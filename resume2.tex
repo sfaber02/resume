@@ -1,0 +1,264 @@
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum} 
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\footskip}{4.08003pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.0cm, top=1cm, right=1cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\footskip}{4.08003pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Shawn Faber} % Your Name
+\newcommand{\phone}{(401)585-9368}
+\newcommand{\emaila}{sfaber02@gmail.com}
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{\dimexpr\linewidth-0.3cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} \\ 
+  {\raisebox{0.0\height}{\footnotesize \faPhone}\phone} & \href{https://www.github.com/sfaber02/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub}}\\
+  \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize 
+ \faEnvelope}\ {\emaila}}&\href{https://www.linkedin.com/in/shawn-faber/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Peloton Interactive}{New York, NY}
+      {Backend Software Engineer}{Dec 2022 - Present}
+      \vspace{+4.0mm}
+
+      {\footnotesize{\textbf{Uptime and Reliability}}}
+      \vspace{-5.0mm}
+      \resumeItemListStart
+        \item {Ensured high uptime and reliability on critical services for Peloton's in-class experience, significantly reducing downtime and improving overall service availability.}
+        \item {Proactively monitored system performance and implemented automated alerting mechanisms to quickly address potential issues, minimizing disruptions for users.}
+        \item {Conducted regular performance tuning and capacity planning to handle peak loads and ensure consistent service performance during high-traffic periods.}
+        \item {Migrated critical code paths from a monolithic architecture to a microservice architecture, resulting in improved scalability and maintainability of the codebase.}
+        \resumeItemListEnd
+      
+        \vspace{-1.0mm}
+      {\footnotesize{\textbf{Backend Development}}}
+      \vspace{-5.0mm}
+      \resumeItemListStart
+        \item {Built scalable and performant backend services that enhance the experience of Peloton's community, enabling seamless integration of new features and ensuring system reliability.}
+        \item {Optimized database queries and introduced caching mechanisms to improve response times, resulting in faster user interactions and enhanced user satisfaction.}
+        \item {Collaborated with cross-functional teams, including front-end developers and product managers, to design and implement APIs that meet user needs and support new product features.}
+      \resumeItemListEnd
+      \vspace{-1.0mm}
+      {\footnotesize{\textbf{Additional Contributions}}}
+      \vspace{-5.0mm}
+      \resumeItemListStart
+      \item {Implemented blocking features for all Peloton users that filter 500 million workouts per day, ensuring a safe and secure environment for all users.}
+      \item {Maintained internal infrastructure and tooling to support various product features, ensuring developers had the tools they needed for efficient and effective development.}
+      \resumeItemListEnd
+    
+    % \vspace{-3.0mm}
+
+    % \resumeSubheading
+    %   {Company Name}{City}
+    %   {Your Role}{Event dates}
+    %   \vspace{-2.0mm}
+    %   \resumeItemListStart
+    % \item {Work description line 1}
+    % \item {Work description line 2}
+    % \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills}}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+     \textbf{Back End}{: Python, Kotlin, Javascript} \\
+     \textbf{Front End}{: HTML, CSS, JavaScript, React} \\
+     \textbf{DBMS}{: PostgreSQL, Redis, DynamoDB} \\
+     \textbf{DevOps}{: Docker, Git, Jenkins, Github Actions} \\
+     \textbf{Misc}{: AWS, Datadog} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Mixle} %Project Name
+      {An audio manipulation game where users create a custom mix of a daily song.} %Project Name, Location Name
+      {Jun 2022} %Event Dates
+
+      \resumeItemListStart
+        \item {Javascript, React, Express, PostgreSQL, Web Audio API, Netlify, Heroku}
+        \item {Links: \href{https://mixle.netlify.app/mixer}{Live Game}, \href{https://github.com/sfaber02/mixle-frontend}{Frontend}, \href{https://github.com/sfaber02/mixle-backend}{Backend}}
+    \resumeItemListEnd
+    \vspace{-2.0mm}
+    
+    \resumeProject
+      {\href{https://mixle.netlify.app/mixer}{Netbench}} %Project Name
+      {A tool to conduct network speed benchmarks and visually represent the results through detailed graphs} %Project Name, Location Name
+      {April 2024} %Event Dates
+
+      \resumeItemListStart
+        \item {Python, C}
+        \item {Links: \href{https://github.com/sfaber02/NetBench}{Source Code}}
+    \resumeItemListEnd
+    \vspace{-2.0mm}  
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Semi Finalist} % Award
+    { 2023 Peloton Hackathon} % Event
+    {June 2023} %Event Year
+    
+\resumePOR{Best in Show} % Award
+    {Pursuit Capstone} % Event
+    {June 2022} %Event Year
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Pursuit}{New York, NY}
+        {Advanced Software Engineering Immersive}{2021 - 2022}
+    \resumeSubheading
+        {Burlington College}{Burlington, VT}
+        {B.A. English}{2009 - 2013}
+  \resumeSubheading
+        {Drexel University}{Philadelphia, PA}
+        {Computer Science Coursework}{2002 - 2003}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+%-------------------------------------------
+\end{document}
